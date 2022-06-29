@@ -1,0 +1,420 @@
+/* style.css */
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css");
+
+@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
+/* 나눔고딕 * {
+ font-family: 'Nanum Gothic', sans-serif;
+}*/
+
+@import url(//fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
+/* 나눔 명조 * {
+ font-family: 'Nanum Myeongjo', serif;
+}*/
+
+
+/* 각각의 컨테이너에 높이를 잡는다(쓰는 이해...) */
+
+:root {
+  --main-color: #0C2D83;
+  --sub-color: #4b7eff;
+  --container-width: 1440px;
+  /* 페이지 폭 */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(243, 243, 243);
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 18px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* h2 = 제목 파트 */
+h2 {
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 26px;
+  font-weight: bolder;
+}
+
+h4 {
+  font-family: 'NanumGothic';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+h5 {
+  font-family: 'NanumGothic';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.container {
+  width: var(--container-width);
+  margin: 0 auto;
+  /*outline: 2px solid coral;*/
+}
+
+
+/* ---------------------- 헤더 영역 ----------------------- */
+
+/*#main-header {
+  background: #ccc;
+}*/
+
+#main-header .container {
+  position: relative;
+  height: 100px;
+  border-bottom: 1px solid rgba(165, 165, 165, 0.55);
+}
+
+#main-header h1 {
+  position: absolute;
+  left: 20px;
+  top: 26px;
+}
+
+#gnb01 {
+  position: absolute;
+  left: 242px;
+  top: 40px;
+  overflow: hidden;
+}
+
+#gnb01>ul>li {
+  display: flex;
+  float: left;
+  margin-right: 60px;
+}
+
+#gnb01>ul>li>a {
+  font-weight: 800;
+}
+
+#gnb01>ul>li>a:hover {
+  color: #4b7eff;
+  text-shadow: 0 0 4px #d8e2fa;
+}
+
+#gnb02 {
+  position: absolute;
+  right: 58px;
+  top: 42px;
+  color: #666;
+  font-size: 14px;
+}
+
+#gnb02 a {
+  color: #666;
+}
+
+#gnb02 a:hover {
+  color: var(--sub-color);
+}
+
+#gnb02 span {
+  margin: 0 14px;
+}
+
+#lang {
+  margin-left: 28px;
+  margin-right: 18px;
+  background-color: transparent;
+}
+
+#tgbtn {
+  background-color: transparent;
+  position: absolute;
+  border: none;
+  right: 20px;
+  top: 35.6px;
+}
+
+#lang {
+  font-size: 12px;
+  color: #666;
+  width: 44px;
+  height: 18px;
+  border: 1px solid #666;
+  border-radius: 10px;
+}
+
+
+/* ---------------------- 메인 이미지 영역 ----------------------- */
+
+
+#main-vis .container {
+  position: relative;
+  height: 500px;
+  /*background: #ccc;
+  outline: 2px solid rgb(80, 214, 255);*/
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../images/mc01_bg.jpg);
+}
+
+#main-vis h2 {
+  font-size: 48px;
+  line-height: 72px;
+  letter-spacing: 0.02em;
+  word-spacing: 0.4em;
+  color: white;
+}
+
+#main-vis .container h2 {
+  position: absolute;
+  left: 58px;
+  top: 158px;
+}
+
+/* ---------------------- 메인 소개 영역 ----------------------- */
+
+#Introduction .container {
+  height: 542px;
+  overflow: hidden;
+  padding-left: 20px;
+  right: 20px;
+  /*background-color: rgb(179, 25, 25);*/
+}
+
+#Introduction h2 {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+#Introduction .row {
+  background-color: rgb(88, 80, 80);
+  width: calc(1440/4);
+}
+
+#Introduction .col {
+  width: 335px;
+  height: 386px;
+  margin-right: 20px;
+  /*outline: 2px solid rgb(104, 235, 104);
+  background-color: #fff;*/
+  float: left;
+  text-align: center;
+}
+
+#Introduction p {
+  font-weight: 400;
+  font-size: 18px;
+  margin-bottom: 3px;
+}
+
+#Introduction img {
+  width: 335px;
+  height: 315px;
+  object-fit: cover;
+}
+
+/* ---------------------- 메인 - 공지사항 영역 ----------------------- */
+
+/* 공지사항 영역 다시 제작하기 */
+
+#notice .container {
+  height: 398px;
+  overflow: hidden;
+  /*background-color: rgb(161, 151, 151);*/
+}
+
+/*#notice .row {
+  background-color: #fff;
+}*/
+
+#notice .col {
+  /*outline: 2px solid rgb(172, 15, 15);*/
+  text-align: center;
+  width: calc(var(--container-width)/3);
+  height: 245px;
+  float: left;
+}
+
+#notice h2 {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+#notice .col a {
+  font-size: 14px;
+  color: #666;
+  text-decoration: underline;
+}
+
+#notice .col a:hover {
+  color: var(--sub-color);
+}
+
+#notice h4 {
+  margin-top: 25px;
+  margin-bottom: 14px;
+}
+
+#notice img {
+  width: 80px;
+  margin-top: 50px;
+}
+
+
+/* ---------------------- 메인 하단 영역 ----------------------- */
+
+
+#sns-banner .container {
+  overflow: hidden;
+  /*background-color: rgb(19, 153, 14);*/
+  height: 163px;
+  margin-top: 54px;
+  margin-bottom: 100px;
+  color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../images/Frame\ 1.png");
+}
+
+/* #sns-banner h4와 p를 div banner-title로 묶는다(position: absolute;) */
+
+#sns-banner h4 {
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 26px;
+  margin-top: 50px;
+  margin-left: 64px;
+}
+
+#sns-banner p {
+  margin-top: 10px;
+  margin-left: 64px;
+}
+
+#sns-banner .sns {
+  margin-left: 1200px;
+  margin-top: -52px;
+  width: 160px;
+  height: 44px;
+  /*outline: 2px solid rgb(68, 30, 30);*/
+}
+
+#sns-banner a {
+  padding-left: 40px;
+}
+
+#sns-banner img {
+  /*outline: 2px solid #fff;*/
+  right: 72px;
+}
+
+
+/* ---------------------- 푸터 영역 ----------------------- */
+
+#main-footer .container {
+  height: 168px;
+  /*outline: 2px solid rgb(155, 154, 154);*/
+  border-top: 1px solid #aaa;
+}
+
+#main-footer .footer-title {
+  margin-left: 20px;
+  margin-top: 48px;
+}
+
+#main-footer h5 {
+  margin-bottom: 18px;
+}
+
+#main-footer p {
+  color: #666;
+  line-height: 22px;
+  font-size: 14px;
+}
+
+
+
+/* ---------------------- 팝업 영역 ----------------------- */
+
+/* display: flex;
+   align-items: center;
+   justify-content: center; */
+
+#modal {
+  width: 450px;
+  height: 420px;
+  /*outline: 2px solid coral;*/
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  font-family: 'Nanum Gothic', sans-serif;
+  text-align: center;
+  font-weight: bold;
+  position: fixed;
+  z-index: 1000;
+  left: 40%;
+  top: 20%;
+  display: none;
+}
+
+#modal.on {
+  display: block;
+}
+
+#modal header {
+  padding: 10px;
+  background-color: var(--main-color);
+  color: #fff;
+}
+
+#modal h2 {
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 20px;
+}
+
+#modal .contents {
+  background-color: rgb(240, 247, 250);
+  height: 90%;
+  position: relative;
+}
+
+#modal .contents h2 {
+  position: absolute;
+  top: 76px;
+  left: 206px;
+}
+
+#modal .p {
+  position: absolute;
+  top: 145px;
+  /*outline: 2px solid #fff;*/
+  font-size: 18px;
+}
+
+/* p:nth-of-type() */
+
+#modal .p2 {
+  padding: 30px;
+  height: 106px;
+}
+
+#modal .btn-close {
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
+  font-size: 16px;
+  border-style: none;
+  background-color: transparent;
+  font-weight: 600;
+}
